@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Grid, Row, Col } from 'react-bootstrap-15';
 import { Hashtag } from 'react-twitter-widgets';
 import Twitch from '../Twitch/Twitch';
 

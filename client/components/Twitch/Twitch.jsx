@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Image } from 'react-bootstrap';
+import { Row, Col, Image } from 'react-bootstrap-15';
 import $ from 'jquery';
 import _ from 'underscore';
 
