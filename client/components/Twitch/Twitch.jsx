@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Image } from 'react-bootstrap';
 import $ from 'jquery';
 import _ from 'underscore';
 
@@ -31,16 +31,14 @@ class TwitchComponent extends Component {
     return (
       <Col xs={12} sm={3}>
         <h4>Twitch</h4>
-        <Row>
-          {this.state.games.map((x) => {
-            return (
-              <Col xs={6} key={x.game._id}>
-                <label>{x.game.name}</label>
-                <p>{x.viewers}</p>
-              </Col>
-            )
-          })}
-        </Row>
+        {this.state.games.map((x) => {
+          return (
+            <div style={{width: '25%', display: 'inline-block', padding: '0.1em'}} key={x.game._id}>
+              <Image alt={x.channels} src={x.game.box.small} />
+              <p>{x.viewers}</p>
+            </div>
+          )
+        })}
       </Col>
     );
   }
