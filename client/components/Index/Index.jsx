@@ -1,22 +1,49 @@
 import React, { Component } from 'react';
+import { Grid, Row, Col } from 'react-bootstrap';
+import { Hashtag } from 'react-twitter-widgets';
+import Twitch from '../Twitch/Twitch';
 
 class IndexComponent extends Component {
   render() {
-    if (this.props.items.length === 0) {
-      return (
-        <p ref="empty">Index is empty.</p>
-      );
-    }
-
     return (
-      <section>
-        <h2>react-webpack-boilerplate</h2>
-        <ul ref="indexList" className="index-list">
-          {this.props.items.map((item, index) => {
-            return (<li key={index}>item {item}</li>);
-          })}
-        </ul>
-      </section>
+      <Grid>
+        <Row>
+          <Col xs={12} sm={3}>
+            <h4>Twitter</h4>
+            <Row>
+              <Col xs={6}>
+                <Hashtag hashtag="dota2"/>
+              </Col>
+              <Col xs={6}>
+                <Hashtag hashtag="ti6"/>
+              </Col>
+            </Row>
+          </Col>
+          <Col xs={12} sm={3}>
+            <h4>Instagram</h4>
+            <Row>
+              <Col xs={6}>
+                <p>#topic</p>
+              </Col>
+              <Col xs={6}>
+                <p>#topic</p>
+              </Col>
+            </Row>
+          </Col>
+          <Col xs={12} sm={3}>
+            <h4>Facebook</h4>
+            <Row>
+              <Col xs={6}>
+                <p>#topic</p>
+              </Col>
+              <Col xs={6}>
+                <p>#topic</p>
+              </Col>
+            </Row>
+          </Col>
+          <Twitch/>
+        </Row>
+      </Grid>
     );
   }
 }
